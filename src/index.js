@@ -38,7 +38,7 @@ const isProperty = key =>
     key !== "children" && !isEvent(key)
 const isNew = (prev, next) => key =>
     prev[key] !== next[key]
-const isGone = (prev, Next) => key => !(key in next)
+const isGone = (prev, next) => key => !(key in next)
 function updateDom(dom, prevProps, nextProps) {
     // Remove old or changed event listeners
     Object.keys(prevProps)
@@ -318,7 +318,7 @@ const Didact = {
 function Counter() {
     const [state, setState] = Didact.useState(1)
     return (
-        <h1 onClick={() => setState(c => c + 1)}>
+        <h1 onClick={() => setState(c => c + 1)} style="user-select: none">
             Count: {state}
         </h1>
     )
