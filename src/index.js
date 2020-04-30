@@ -1,3 +1,5 @@
+// Tutorial from: https://pomb.us/build-your-own-react/
+
 function createElement(type, props, ...children) {
     return {
         type,
@@ -257,7 +259,7 @@ function reconcileChildren(wipFiber, elements) {
         const element = elements[index]
         let newFiber = null
 
-        //TODO cmopare oldFiber to element
+        //TODO compare oldFiber to element
         const sameType =
             oldFiber &&
             element &&
